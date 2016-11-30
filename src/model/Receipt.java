@@ -25,14 +25,15 @@ public class Receipt {
 		this.watch = watch;
 	}
 
-	public float convertPrice(String curr) {
+	public static float convertPrice(float price ,String curr) {
+		
 		switch (curr) {
 		case "USD":
-			return (float) (watch.getPrice()*1.06282);
+			return (float) (price*1.06282);
 		case "GBP":
-			return (float) (watch.getPrice()*0.851390052);
+			return (float) (price*0.851390052);
 		default:
-			return watch.getPrice();
+			return price;
 		}
 	}
 }

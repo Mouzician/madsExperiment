@@ -1,6 +1,7 @@
+package mob;
 
 public class Extensos {
-	pprivate static String numBasic[]={"ZERO","ONE","TWO","THREE","FOUR","FIVE","SIX","SEVEN","EIGHT","NINE",
+	private static String numBasic[]={"ZERO","ONE","TWO","THREE","FOUR","FIVE","SIX","SEVEN","EIGHT","NINE",
 		"TEN","ELEVEN","TWELVE","THIRTEEN","FOURTEEN","FIFTEEN","SIXTEEN","SEVENTEEN","EIGHTEEN","NINETEEN"};
 	private static String dezenas[]={"TWENTY","THIRTY","FORTY","FIFTY","SIXTY","SEVENTY","EIGHTY","NINETY","ONE HUNDRED"};
 	private static String centenas[]={"ONE HUNDRED","TWO HUNDRED","THREE HUNDRED","FOUR HUNDRED","FIVE HUNDRED","SIX HUNDRED","SEVEN HUNDRED",
@@ -26,7 +27,7 @@ public class Extensos {
 			}
 			extenso += "THOUSAND ";
 			if((num%1000==0) || (num%1000>=1)&&(num%100==0)&&(num%10==0)){
-				extenso +="AND ";				
+				extenso +=" ";				
 			}
 			num=num%1000;
 		}
@@ -34,14 +35,14 @@ public class Extensos {
 		if(num>100 && num<=999){
 			extenso += centenas[num/100-1];
 			if(num%100!=0)
-				extenso +=" AND ";
+				extenso +=" ";
 			num=num%100;
 		}
 
 		if(num>=20 && num<=100){
 			extenso+= dezenas[num/10-2];
 			if(num%10!=0)
-				extenso +=" AND ";
+				extenso +=" ";
 			num=num%10;
 		}
 		if(num<20 && num>0)

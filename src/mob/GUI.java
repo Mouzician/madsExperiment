@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import model.Receipt;
 import model.Store;
 import model.Watch;
 
@@ -90,7 +91,7 @@ public class GUI extends JFrame {
 		JPanel panel = new JPanel();
 		contentPane.add(panel);
 		
-		Choice choice = new Choice();
+		final Choice choice = new Choice();
 		choice.add("EUR");
 		choice.add("GBP");
 		choice.add("USD");
@@ -161,7 +162,18 @@ public class GUI extends JFrame {
 					JOptionPane.showMessageDialog(GUI.this, "Insert email, please!", "Error",
 						    JOptionPane.ERROR_MESSAGE);
 				}else{
-					JOptionPane.showMessageDialog(GUI.this, "");
+					int acc=0;
+					for(Watch watch : store.getWatchs()){
+						if(watch.getBrand().equals(store.getBrands().get(brandID))){
+							break;
+						}else{
+							acc++;
+						}
+					}
+					JOptionPane.showMessageDialog(GUI.this, "You bought one watch from "+store.getBrands().get(brandID)
+							+"-"+store.getWatchs().get(modelID+acc).getModel()+" for "+
+							Extensos.numExt((int)Receipt.convertPrice(store.getWatchs().get(modelID+acc).getPrice(), choice.getSelectedItem()))
+							+" "+choice.getSelectedItem());
 				}
 				
 			}

@@ -21,12 +21,12 @@ public class Extensos {
 			if(num/1000>1)
 				extenso += numBasic[num/1000]+" ";
 			if(num%1000==0 && num%100==0 &&num%10==0){
-				extenso += "MIL";
+				extenso += "THOUSAND";
 				return extenso;
 			}
-			extenso += "MIL ";
+			extenso += "THOUSAND ";
 			if((num%1000==0) || (num%1000>=1)&&(num%100==0)&&(num%10==0)){
-				extenso +="E ";				
+				extenso +="AND ";				
 			}
 			num=num%1000;
 		}
@@ -34,14 +34,14 @@ public class Extensos {
 		if(num>100 && num<=999){
 			extenso += centenas[num/100-1];
 			if(num%100!=0)
-				extenso +=" E ";
+				extenso +=" AND ";
 			num=num%100;
 		}
 
 		if(num>=20 && num<=100){
 			extenso+= dezenas[num/10-2];
 			if(num%10!=0)
-				extenso +=" E ";
+				extenso +=" AND ";
 			num=num%10;
 		}
 		if(num<20 && num>0)

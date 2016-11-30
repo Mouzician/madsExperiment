@@ -1,10 +1,10 @@
 
 public class Extensos {
-	private static String numBasic[]={"ZERO","UM","DOIS","TRÊS","QUATRO","CINCO","SEIS","SETE","OITO","NOVE",
-		"DEZ","ONZE","DOZE","TREZE","QUATORZE","QUINZE","DEZASEIS","DEZASETE","DEZOITO","DEZANOVE"};
-	private static String dezenas[]={"VINTE","TRINTA","QUARENTA","CINQUENTA","SESSENTA","SETENTA","OITENTA","NOVENTA","CEM"};
-	private static String centenas[]={"CENTO","DUZENTOS","TREZENTOS","QUATROCENTOS","QUINHENTOS","SEISSENTOS","SETECENTOS",
-		"OITOCENTOS","NOVECENTOS"};
+	pprivate static String numBasic[]={"ZERO","ONE","TWO","THREE","FOUR","FIVE","SIX","SEVEN","EIGHT","NINE",
+		"TEN","ELEVEN","TWELVE","THIRTEEN","FOURTEEN","FIFTEEN","SIXTEEN","SEVENTEEN","EIGHTEEN","NINETEEN"};
+	private static String dezenas[]={"TWENTY","THIRTY","FORTY","FIFTY","SIXTY","SEVENTY","EIGHTY","NINETY","ONE HUNDRED"};
+	private static String centenas[]={"ONE HUNDRED","TWO HUNDRED","THREE HUNDRED","FOUR HUNDRED","FIVE HUNDRED","SIX HUNDRED","SEVEN HUNDRED",
+		"EIGHT HUNDRED","NINE HUNDRED"};
 	public Extensos() {
 
 	}
